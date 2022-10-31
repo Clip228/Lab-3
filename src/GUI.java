@@ -138,6 +138,7 @@ public class GUI {
         }
     }
     public void newArrX(){
+        lm.removeAllElements();
         x[0] = 1.0;
         x[1] /= 1.0 /3;
         x[2] -= 1.0/3 +1.0/5;
@@ -164,6 +165,7 @@ public class GUI {
         }
     }
     public void loudArrayX(String fileName){
+        lm.removeAllElements();
         String str;
         try{
             BufferedReader br = new BufferedReader(new FileReader(fileName));
