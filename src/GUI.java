@@ -103,6 +103,13 @@ public class GUI {
                 Calculate();
             }
         });
+        exitMenu.add(item5);
+        item5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
+            }
+        });
         lm = new DefaultListModel();
         list = new JList(lm);
         JScrollPane scrollPane = new JScrollPane(list);
@@ -197,10 +204,12 @@ public class GUI {
         if (tf1.getText()!=null){
             lm.insertElementAt(tf1.getText(), index);
             lm.remove(index+1);
+            x[index] = Double.parseDouble(tf1.getText());
         }
         if (tf2.getText()!=null){
             cb.insertItemAt(tf2.getText(), index2);
             cb.removeItemAt(index2+1);
+            y[index2] = Double.parseDouble(tf2.getText());
         }
 
     }
